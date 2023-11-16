@@ -49,8 +49,6 @@ function calculateTip(totalBill, tipvalue, numOfPeople) {
   let totalAmount = totalBill / numOfPeople;
   totalAmount = totalAmount.toFixed(2);
 
-  //   const eachPersonPays = parseFloat(tip) + parseFloat(totalAmount);
-
   tipPerPerson.value = `$${tip}`;
   totalPerPerson.value = `$${parseFloat(totalAmount) + parseFloat(tip)}`;
 }
@@ -62,3 +60,12 @@ function resetEverything() {
   numOfPeople.value = "";
   customTip.value = "";
 }
+
+totalBill.addEventListener("blur", () => {
+  if (isNaN(parseFloat(totalBill.value))) {
+    console.log("Must be numeric");
+  }
+  if (parseFloat(totalBill.value) === 0) {
+    console.log("Cannot be zero");
+  }
+});
