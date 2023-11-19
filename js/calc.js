@@ -27,12 +27,10 @@ percentBtns.forEach((button) => {
 customTip.addEventListener('blur', (e) => {
     if (totalBill.value === '') return;
 
-
-
     numOfPeople.addEventListener('blur', () => {
         calculateTip(
             parseFloat(totalBill.value),
-            parseFloat(e.target.value),
+            parseFloat(e.target.value / 100),
             parseInt(numOfPeople.value)
         );
     });
@@ -40,6 +38,8 @@ customTip.addEventListener('blur', (e) => {
 
 // //Calculate Tip
 function calculateTip(totalBill, tipvalue, numOfPeople) {
+    console.log(tipvalue);
+
     let tip = (totalBill / numOfPeople) * tipvalue;
     tip = tip.toFixed(2);
 
