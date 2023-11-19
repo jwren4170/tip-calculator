@@ -27,6 +27,8 @@ percentBtns.forEach((button) => {
 customTip.addEventListener('blur', (e) => {
     if (totalBill.value === '') return;
 
+
+
     numOfPeople.addEventListener('blur', () => {
         calculateTip(
             parseFloat(totalBill.value),
