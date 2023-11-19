@@ -1,110 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="shortcut/icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon.ico"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/script.js" defer></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Frontend Mentor | Tip calculator app</title>
-  </head>
+  <link rel="shortcut/icon" type="image/png" sizes="32x32" href="./images/favicon.ico" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="./js/script.js" type="module" defer></script>
 
-  <body>
-    <main>
-      <div class="wrapper-outer">
-        <img class="logo" src="./images/logo.svg" alt="" />
-        <div class="wrapper-inner">
-          <section class="section-one flow-content">
-            <div class="selections">
-              <form class="form-total" autocomplete="off">
-                <label for="bill-total">Bill</label>
-                <div class="money flow-content">
-                  <img src="./images/icon-dollar.svg" alt="" />
-                  <input
-                    type="text"
-                    name="bill-total"
-                    id="bill-total"
-                    placeholder="0"
-                  />
-                </div>
-              </form>
-            </div>
-            <div class="tip-selections">
-              <p>Select Tip %</p>
-              <div class="btn-percents">
-                <button data-tip=".10">10%</button>
-                <button data-tip=".05">5%</button>
-                <button data-tip=".15">15%</button>
-                <button data-tip=".25">25%</button>
-                <button data-tip=".50">50%</button>
-                <input
-                  data-tip="custom"
-                  id="custom-tip"
-                  type="text"
-                  placeholder="Custom"
-                />
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <main>
+    <div class="wrapper-outer">
+      <img class="logo" src="./images/logo.svg" alt="" />
+      <div class="wrapper-inner">
+
+        <section class="section-one flow-content">
+          <div class="selections">
+            <form class="form-total" autocomplete="off">
+              <label for="bill-total">Bill <span>Can't be zero</span></label>
+              <div class="money flow-content">
+                <img src="./images/icon-dollar.svg" alt="" />
+                <input type="text" name="bill-total" id="bill-total" placeholder="0" />
               </div>
+            </form>
+          </div>
+          <div class="tip-selections">
+            <p>Select Tip %</p>
+            <div class="btn-percents">
+              <button data-tip=".10">10%</button>
+              <button data-tip=".05">5%</button>
+              <button data-tip=".15">15%</button>
+              <button data-tip=".25">25%</button>
+              <button data-tip=".50">50%</button>
+              <input data-tip="custom" id="custom-tip" type="text" placeholder="Custom" />
             </div>
-            <div>
-              <form class="form-people">
-                <label for="num-of-people">Number of People</label>
-                <div class="people flow-content">
-                  <img src="./images/icon-person.svg" alt="" />
-                  <input
-                    type="text"
-                    id="num-of-people"
-                    name="num-of-people"
-                    placeholder="0"
-                  />
-                </div>
-              </form>
-            </div>
-          </section>
-          <section class="section-two">
-            <div class="results">
-              <form class="form-results">
-                <div class="tip-per-amount">
-                  <label for="tip-per-person"
-                    >Tip Amount <span>/ person</span>
-                  </label>
-                  <input
-                    id="tip-per-person"
-                    name="tip-amount"
-                    type="text"
-                    placeholder="$0.00"
-                    readonly
-                  />
-                </div>
-                <div class="total">
-                  <label for="total-per-person"
-                    >Total <span>/ person</span>
-                  </label>
-                  <input
-                    id="total-per-person"
-                    name="total"
-                    type="text"
-                    placeholder="$0.00"
-                    readonly
-                  />
-                </div>
-                <button type="reset" id="reset">Reset</button>
-              </form>
-            </div>
-          </section>
-        </div>
-      </div>
-    </main>
+          </div>
+          <div>
+            <form class="form-people">
+              <label for="num-of-people">Number of People <span>Can't be zero</span></label>
+              <div class="people flow-content">
+                <img src="./images/icon-person.svg" alt="" />
+                <input type="text" id="num-of-people" name="num-of-people" placeholder="0" />
+              </div>
+            </form>
+          </div>
+        </section>
 
-    <!-- <div class="attribution">
+        <section class="section-two">
+          <div class="results">
+            <form class="form-results">
+              <div class="tip-per-amount">
+                <label for="tip-per-person">Tip Amount <span>/ person</span>
+                </label>
+                <input id="tip-per-person" name="tip-amount" type="text" placeholder="$0.00" readonly />
+              </div>
+              <div class="total">
+                <label for="total-per-person">Total <span>/ person</span>
+                </label>
+                <input id="total-per-person" name="total" type="text" placeholder="$0.00" readonly />
+              </div>
+              <button type="reset" id="reset">Reset</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
-  </body>
+</body>
+
 </html>

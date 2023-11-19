@@ -84,6 +84,10 @@ img.logo {
   display: none;
 }
 
+.section-one label span.success {
+  display: none;
+}
+
 .section-one label span.error {
   color: var(--clr-error);
   display: inline;
@@ -104,7 +108,7 @@ input {
 }
 
 /* utilities */
-.flow-content > * + * {
+.flow-content>*+* {
   margin-bottom: 1rem;
 }
 
